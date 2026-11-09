@@ -133,7 +133,6 @@
       <div class="hidden md:flex items-center space-x-6 text-sm font-medium text-slate-300">
         <a href="#about" class="hover:text-brand-400 transition" data-i18n="nav-about">เกี่ยวกับ</a>
         <a href="#experience" class="hover:text-brand-400 transition" data-i18n="nav-experience">ประสบการณ์</a>
-        <a href="#portfolio" class="hover:text-brand-400 transition" data-i18n="nav-portfolio">ผลงานตัวอย่าง</a>
         <a href="#skills" class="hover:text-brand-400 transition" data-i18n="nav-skills">ทักษะ</a>
         <a href="#education" class="hover:text-brand-400 transition" data-i18n="nav-education">การศึกษา</a>
         <a href="#contact" class="hover:text-brand-400 transition" data-i18n="nav-contact">ติดต่อ</a>
@@ -178,7 +177,6 @@
     <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-4 space-y-2 bg-slate-900/95 border-b border-slate-800">
       <a href="#about" onclick="toggleMobileMenu()" class="block py-2 text-sm text-slate-300 hover:text-brand-400" data-i18n="nav-about">เกี่ยวกับ</a>
       <a href="#experience" onclick="toggleMobileMenu()" class="block py-2 text-sm text-slate-300 hover:text-brand-400" data-i18n="nav-experience">ประสบการณ์</a>
-      <a href="#portfolio" onclick="toggleMobileMenu()" class="block py-2 text-sm text-slate-300 hover:text-brand-400" data-i18n="nav-portfolio">ผลงานตัวอย่าง</a>
       <a href="#skills" onclick="toggleMobileMenu()" class="block py-2 text-sm text-slate-300 hover:text-brand-400" data-i18n="nav-skills">ทักษะ</a>
       <a href="#education" onclick="toggleMobileMenu()" class="block py-2 text-sm text-slate-300 hover:text-brand-400" data-i18n="nav-education">การศึกษา</a>
       <a href="#contact" onclick="toggleMobileMenu()" class="block py-2 text-sm text-slate-300 hover:text-brand-400" data-i18n="nav-contact">ติดต่อ</a>
@@ -239,10 +237,10 @@
 
           <!-- CTA Buttons -->
           <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3 sm:gap-4">
-            <a href="#portfolio" class="px-6 py-3 rounded-xl bg-brand-500 hover:bg-brand-400 text-slate-950 font-bold text-sm transition duration-200 shadow-lg shadow-brand-500/25 flex items-center space-x-2">
-              <i class="fa-solid fa-folder-open"></i>
-              <span data-i18n="cta-portfolio">ดูตัวอย่างผลงานเด่น</span>
-            </a>
+            <button onclick="openCvModal('EN')" class="px-6 py-3 rounded-xl bg-brand-500 hover:bg-brand-400 text-slate-950 font-bold text-sm transition duration-200 shadow-lg shadow-brand-500/25 flex items-center space-x-2">
+              <i class="fa-solid fa-file-pdf"></i>
+              <span data-i18n="cta-cv-preview">เปิดดู CV ออนไลน์ (Preview)</span>
+            </button>
             
             <a href="assets/CV-Yuttana-Khiaoya-EN.pdf" download class="px-5 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-white font-semibold text-sm transition flex items-center space-x-2">
               <i class="fa-solid fa-file-pdf text-red-400"></i>
@@ -385,233 +383,6 @@
         </div>
 
       </div>
-    </div>
-  </section>
-
-  <!-- WORK SAMPLES & PORTFOLIO SHOWCASE -->
-  <section id="portfolio" class="py-20 bg-slate-900/30 border-t border-slate-800">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <!-- Section Title -->
-      <div class="text-center max-w-2xl mx-auto mb-14">
-        <span class="text-xs font-bold text-brand-400 tracking-wider uppercase" data-i18n="portfolio-subtitle">FEATURED WORK SAMPLES</span>
-        <h2 class="text-3xl font-extrabold text-white mt-1" data-i18n="portfolio-title">ไฟล์ตัวอย่างผลงาน & การวิจัยเชิงลึก</h2>
-        <p class="text-sm text-slate-400 mt-2" data-i18n="portfolio-desc">คลิกเพื่อดูไฟล์ความละเอียดสูง / ดาวน์โหลดไฟล์ผลงานตัวอย่างเพื่อนำไปใช้งาน</p>
-        <div class="w-16 h-1 bg-brand-500 mx-auto mt-3 rounded-full"></div>
-      </div>
-
-      <!-- Portfolio Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        
-        <!-- ITEM 1: Tesla Advisor Landscape Infographic Guide -->
-        <div class="glass-card rounded-2xl overflow-hidden border border-slate-800 hover:border-brand-500/50 transition duration-300 flex flex-col group">
-          <div class="relative overflow-hidden aspect-[16/10] bg-slate-950 cursor-pointer" onclick="openImageLightbox('assets/tesla-advisor-landscape.png', 'Tesla Advisor - คู่มือเตรียมสัมภาษณ์ & ความรู้ผลิตภัณฑ์เทสลา (Landscape Infographic)')">
-            <img src="assets/thumbs/tesla-landscape.webp" alt="Tesla Advisor Infographic Guide" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-            <div class="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center space-x-3">
-              <span class="px-3 py-1.5 rounded-lg bg-brand-500 text-slate-950 font-bold text-xs flex items-center space-x-1.5 shadow-lg">
-                <i class="fa-solid fa-magnifying-glass-plus"></i>
-                <span>ซูมดูรูปเต็ม</span>
-              </span>
-            </div>
-            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-red-600/90 text-white font-bold text-[10px] tracking-wide uppercase">
-              Tesla Case Study
-            </span>
-          </div>
-          <div class="p-5 flex-1 flex flex-col justify-between">
-            <div>
-              <h3 class="font-bold text-white text-base group-hover:text-brand-400 transition">
-                Tesla Advisor: คู่มือความรู้ & เตรียมสัมภาษณ์เชิงลึก
-              </h3>
-              <p class="text-xs text-slate-400 mt-2 leading-relaxed">
-                อินโฟกราฟิกความรู้ผลิตภัณฑ์เทสลา โครงสร้างพื้นฐาน Supercharger, Powerwall, สเปครถยนต์ Model 3 & Model Y, ระบบ Autopilot/FSD และคำถามสัมภาษณ์ 30 ข้อ
-              </p>
-            </div>
-            <div class="mt-5 pt-3 border-t border-slate-800/80 flex items-center justify-between text-xs">
-              <span class="text-slate-400 text-[11px]"><i class="fa-regular fa-image mr-1"></i> High-Res Infographic</span>
-              <div class="flex items-center space-x-2">
-                <button onclick="openImageLightbox('assets/tesla-advisor-landscape.png', 'Tesla Advisor - คู่มือเตรียมสัมภาษณ์ & ความรู้ผลิตภัณฑ์เทสลา')" class="text-brand-400 hover:underline font-medium">ดูเต็มจอ</button>
-                <a href="assets/tesla-advisor-landscape.png" download class="p-1.5 rounded bg-slate-800 hover:bg-slate-700 text-slate-200" title="ดาวน์โหลด">
-                  <i class="fa-solid fa-download"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- ITEM 2: Tesla Interview 17 Q&A Guide -->
-        <div class="glass-card rounded-2xl overflow-hidden border border-slate-800 hover:border-brand-500/50 transition duration-300 flex flex-col group">
-          <div class="relative overflow-hidden aspect-[16/10] bg-slate-950 cursor-pointer" onclick="openImageLightbox('assets/tesla-advisor-qa17.png', 'Tesla Advisor - สรุปคำถาม-คำตอบ สัมภาษณ์งาน 17 ข้อ พร้อมเทคนิคจำง่าย')">
-            <img src="assets/thumbs/tesla-qa17.webp" alt="Tesla Interview Q&A Cheatsheet" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-            <div class="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center space-x-3">
-              <span class="px-3 py-1.5 rounded-lg bg-brand-500 text-slate-950 font-bold text-xs flex items-center space-x-1.5 shadow-lg">
-                <i class="fa-solid fa-magnifying-glass-plus"></i>
-                <span>ซูมดูรูปเต็ม</span>
-              </span>
-            </div>
-            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-amber-500/90 text-slate-950 font-bold text-[10px] tracking-wide uppercase">
-              Sales Q&A Framework
-            </span>
-          </div>
-          <div class="p-5 flex-1 flex flex-col justify-between">
-            <div>
-              <h3 class="font-bold text-white text-base group-hover:text-brand-400 transition">
-                สรุปคำถาม-คำตอบ สัมภาษณ์งาน Tesla (17 ข้อ)
-              </h3>
-              <p class="text-xs text-slate-400 mt-2 leading-relaxed">
-                การเตรียมความพร้อมตอบคำถามสัมภาษณ์งานที่ปรึกษาการขาย การรับมือข้อโต้แย้งลูกค้าราคาแพง ลูกค้าไม่มีที่ชาร์จบ้าน การจัดการลูกค้าร้องเรียน และแนวคิดการบริการ
-              </p>
-            </div>
-            <div class="mt-5 pt-3 border-t border-slate-800/80 flex items-center justify-between text-xs">
-              <span class="text-slate-400 text-[11px]"><i class="fa-regular fa-image mr-1"></i> High-Res Infographic</span>
-              <div class="flex items-center space-x-2">
-                <button onclick="openImageLightbox('assets/tesla-advisor-qa17.png', 'Tesla Advisor 17 Q&A')" class="text-brand-400 hover:underline font-medium">ดูเต็มจอ</button>
-                <a href="assets/tesla-advisor-qa17.png" download class="p-1.5 rounded bg-slate-800 hover:bg-slate-700 text-slate-200" title="ดาวน์โหลด">
-                  <i class="fa-solid fa-download"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- ITEM 3: Tesla Advisor 2-Page Study Document -->
-        <div class="glass-card rounded-2xl overflow-hidden border border-slate-800 hover:border-brand-500/50 transition duration-300 flex flex-col group">
-          <div class="relative overflow-hidden aspect-[16/10] bg-slate-950 cursor-pointer" onclick="openImageLightbox('assets/tesla-advisor-guide-2page.png', 'Tesla Advisor - เอกสารคู่มือ 25 หัวข้อความรู้ & คำศัพท์เทคนิค')">
-            <img src="assets/thumbs/tesla-guide-2page.webp" alt="Tesla 2-Page Knowledge Document" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-            <div class="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center space-x-3">
-              <span class="px-3 py-1.5 rounded-lg bg-brand-500 text-slate-950 font-bold text-xs flex items-center space-x-1.5 shadow-lg">
-                <i class="fa-solid fa-magnifying-glass-plus"></i>
-                <span>ซูมดูรูปเต็ม</span>
-              </span>
-            </div>
-            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-blue-600/90 text-white font-bold text-[10px] tracking-wide uppercase">
-              Technical Guide
-            </span>
-          </div>
-          <div class="p-5 flex-1 flex flex-col justify-between">
-            <div>
-              <h3 class="font-bold text-white text-base group-hover:text-brand-400 transition">
-                คู่มือความรู้เทสลา 25 หัวข้อ & พจนานุกรมเทคนิค
-              </h3>
-              <p class="text-xs text-slate-400 mt-2 leading-relaxed">
-                สรุปเนื้อหาสำคัญ 25 ข้อ รายละเอียดแบตเตอรี่, มอเตอร์ RWD/AWD, ซอฟต์แวร์ OTA, ระบบความปลอดภัย NHTSA และคำศัพท์เทคนิคสำหรับการสื่อสารกับลูกค้า
-              </p>
-            </div>
-            <div class="mt-5 pt-3 border-t border-slate-800/80 flex items-center justify-between text-xs">
-              <span class="text-slate-400 text-[11px]"><i class="fa-regular fa-file-lines mr-1"></i> 2-Page Document</span>
-              <div class="flex items-center space-x-2">
-                <button onclick="openImageLightbox('assets/tesla-advisor-guide-2page.png', 'Tesla Advisor 2-Page Document')" class="text-brand-400 hover:underline font-medium">ดูเต็มจอ</button>
-                <a href="assets/tesla-advisor-guide-2page.png" download class="p-1.5 rounded bg-slate-800 hover:bg-slate-700 text-slate-200" title="ดาวน์โหลด">
-                  <i class="fa-solid fa-download"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- ITEM 4: Oracle Interview Badge -->
-        <div class="glass-card rounded-2xl overflow-hidden border border-slate-800 hover:border-brand-500/50 transition duration-300 flex flex-col group">
-          <div class="relative overflow-hidden aspect-[16/10] bg-slate-950 cursor-pointer" onclick="openImageLightbox('assets/oracle-candidate-badge.jpeg', 'Oracle Candidate Interview Badge - Yuttana Khiaoya')">
-            <img src="assets/thumbs/oracle-badge.webp" alt="Oracle Candidate Badge" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-            <div class="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center space-x-3">
-              <span class="px-3 py-1.5 rounded-lg bg-brand-500 text-slate-950 font-bold text-xs flex items-center space-x-1.5 shadow-lg">
-                <i class="fa-solid fa-magnifying-glass-plus"></i>
-                <span>ซูมดูรูปเต็ม</span>
-              </span>
-            </div>
-            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-emerald-600/90 text-white font-bold text-[10px] tracking-wide uppercase">
-              Candidate Credential
-            </span>
-          </div>
-          <div class="p-5 flex-1 flex flex-col justify-between">
-            <div>
-              <h3 class="font-bold text-white text-base group-hover:text-brand-400 transition">
-                Oracle Interview Badge (Verified Candidate)
-              </h3>
-              <p class="text-xs text-slate-400 mt-2 leading-relaxed">
-                ป้ายรับรองผู้สมัครผ่านการยืนยันตัวตนสำหรับขั้นตอนการสัมภาษณ์งานกับ Oracle Corporation
-              </p>
-            </div>
-            <div class="mt-5 pt-3 border-t border-slate-800/80 flex items-center justify-between text-xs">
-              <span class="text-slate-400 text-[11px]"><i class="fa-solid fa-id-badge mr-1"></i> Verified Badge</span>
-              <div class="flex items-center space-x-2">
-                <button onclick="openImageLightbox('assets/oracle-candidate-badge.jpeg', 'Oracle Candidate Badge')" class="text-brand-400 hover:underline font-medium">ดูเต็มจอ</button>
-                <a href="assets/oracle-candidate-badge.jpeg" download class="p-1.5 rounded bg-slate-800 hover:bg-slate-700 text-slate-200" title="ดาวน์โหลด">
-                  <i class="fa-solid fa-download"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- ITEM 5: Official Resume & CV Documents -->
-        <div class="glass-card rounded-2xl overflow-hidden border border-slate-800 hover:border-brand-500/50 transition duration-300 flex flex-col group">
-          <div class="relative overflow-hidden aspect-[16/10] bg-slate-950 cursor-pointer" onclick="openCvModal('EN')">
-            <img src="assets/thumbs/cv-preview.webp" alt="CV Preview" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-            <div class="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center space-x-3">
-              <span class="px-3 py-1.5 rounded-lg bg-brand-500 text-slate-950 font-bold text-xs flex items-center space-x-1.5 shadow-lg">
-                <i class="fa-solid fa-eye"></i>
-                <span>เปิดดู CV ทันที</span>
-              </span>
-            </div>
-            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-indigo-600/90 text-white font-bold text-[10px] tracking-wide uppercase">
-              Curriculum Vitae
-            </span>
-          </div>
-          <div class="p-5 flex-1 flex flex-col justify-between">
-            <div>
-              <h3 class="font-bold text-white text-base group-hover:text-brand-400 transition">
-                Curriculum Vitae (CV ฉบับทางการ)
-              </h3>
-              <p class="text-xs text-slate-400 mt-2 leading-relaxed">
-                เอกสารสรุปประวัติการทำงาน ทักษะ และการศึกษา สามารถดาวน์โหลดได้ทั้งฉบับภาษาอังกฤษ (PDF) และภาษาไทย (PDF)
-              </p>
-            </div>
-            <div class="mt-5 pt-3 border-t border-slate-800/80 flex items-center justify-between text-xs">
-              <span class="text-slate-400 text-[11px]"><i class="fa-solid fa-file-pdf mr-1"></i> EN & TH PDF</span>
-              <div class="flex items-center space-x-2">
-                <a href="assets/CV-Yuttana-Khiaoya-EN.pdf" download class="text-brand-400 hover:underline font-medium">EN PDF</a>
-                <span class="text-slate-600">|</span>
-                <a href="assets/CV-Yuttana-Khiaoya-TH.pdf" download class="text-emerald-400 hover:underline font-medium">TH PDF</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- ITEM 6: Web3 & Technical Content Showcase -->
-        <div class="glass-card rounded-2xl overflow-hidden border border-slate-800 hover:border-brand-500/50 transition duration-300 flex flex-col group">
-          <div class="p-6 bg-gradient-to-br from-indigo-950/60 to-slate-900 aspect-[16/10] flex flex-col justify-between border-b border-slate-800">
-            <div class="flex items-center justify-between">
-              <span class="px-2.5 py-1 rounded bg-brand-500/20 text-brand-400 font-bold text-[10px] uppercase">
-                Content & Research
-              </span>
-              <i class="fa-solid fa-cubes text-slate-500 text-xl"></i>
-            </div>
-            <div>
-              <div class="text-lg font-bold text-white">RedStone Oracles & ZKM</div>
-              <p class="text-xs text-slate-400 mt-1">บทความ & คอนเทนต์การศึกษา DeFi, Data Oracles และ Zero-Knowledge</p>
-            </div>
-            <div class="flex items-center space-x-2 text-xs text-brand-300 font-medium">
-              <span>Ecosystem Visibility & Education</span>
-            </div>
-          </div>
-          <div class="p-5 flex-1 flex flex-col justify-between">
-            <div>
-              <h3 class="font-bold text-white text-base group-hover:text-brand-400 transition">
-                Web3 Content Strategy & Market Outreach
-              </h3>
-              <p class="text-xs text-slate-400 mt-2 leading-relaxed">
-                การวิเคราะห์โครงการบล็อกเชน, การสร้างคอนเทนต์ย่อยข้อมูลทางเทคนิคให้เข้าใจง่าย, การเชื่อมโยงชุมชน Web3 ในระดับภูมิภาค
-              </p>
-            </div>
-            <div class="mt-5 pt-3 border-t border-slate-800/80 flex items-center justify-between text-xs">
-              <span class="text-slate-400 text-[11px]"><i class="fa-brands fa-x-twitter mr-1"></i> Community & Growth</span>
-              <a href="https://www.linkedin.com/in/yuttana-khiaoya-5229aa2b2" target="_blank" class="text-brand-400 hover:underline font-medium">ดูใน LinkedIn &rarr;</a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
     </div>
   </section>
 
@@ -1140,14 +911,13 @@
       TH: {
         'nav-about': 'เกี่ยวกับ',
         'nav-experience': 'ประสบการณ์',
-        'nav-portfolio': 'ผลงานตัวอย่าง',
         'nav-skills': 'ทักษะ',
         'nav-education': 'การศึกษา',
         'nav-contact': 'ติดต่อ',
         'status-badge': 'พร้อมเริ่มงาน / Available',
         'hero-tag': 'Business Development • Partnerships • Web3 & Technology',
         'hero-tagline': 'ผู้เชี่ยวชาญด้านการพัฒนาพันธมิตรทางธุรกิจ (Business Development) และการขยายตลาดระบบนิเวศเทคโนโลยี & Web3 พร้อมทักษะการวิจัยตลาด เชิงวิเคราะห์ และการสื่อสารคุณค่าผลิตภัณฑ์ดิจิทัลให้เข้าใจง่ายและขับเคลื่อนยอดขายจริง',
-        'cta-portfolio': 'ดูตัวอย่างผลงานเด่น',
+        'cta-cv-preview': 'เปิดดู CV ออนไลน์ (Preview)',
         'btn-cv': 'โหลด CV',
         'stat-orgs': 'องค์กร & โครงการเทคโนโลยี',
         'stat-domain': 'ความเชี่ยวชาญเฉพาะด้าน',
@@ -1155,9 +925,6 @@
         'stat-bd': 'การพัฒนาพันธมิตร & ลูกค้า',
         'about-subtitle': 'ABOUT ME',
         'about-title': 'บทสรุปประวัติและการทำงาน',
-        'portfolio-subtitle': 'FEATURED WORK SAMPLES',
-        'portfolio-title': 'ไฟล์ตัวอย่างผลงาน & การวิจัยเชิงลึก',
-        'portfolio-desc': 'คลิกเพื่อดูไฟล์ความละเอียดสูง / ดาวน์โหลดไฟล์ผลงานตัวอย่างเพื่อนำไปใช้งาน',
         'exp-subtitle': 'WORK EXPERIENCE',
         'exp-title': 'ประสบการณ์การทำงาน',
         'skills-subtitle': 'CORE COMPETENCIES',
@@ -1171,14 +938,13 @@
       EN: {
         'nav-about': 'About',
         'nav-experience': 'Experience',
-        'nav-portfolio': 'Portfolio Samples',
         'nav-skills': 'Skills',
         'nav-education': 'Education',
         'nav-contact': 'Contact',
         'status-badge': 'Open to Opportunities',
         'hero-tag': 'Business Development • Strategic Partnerships • Web3 & Tech',
         'hero-tagline': 'Junior Business Development professional experienced in strategic partnerships, market expansion, ecosystem growth, and stakeholder engagement. Bringing strong technical acumen across Web3 and modern digital products.',
-        'cta-portfolio': 'Explore Work Samples',
+        'cta-cv-preview': 'Preview CV Online',
         'btn-cv': 'Get CV',
         'stat-orgs': 'Tech & Web3 Organizations',
         'stat-domain': 'Domain Expertise',
@@ -1186,9 +952,6 @@
         'stat-bd': 'Client & Partner Acquisition',
         'about-subtitle': 'PROFESSIONAL SUMMARY',
         'about-title': 'About My Background',
-        'portfolio-subtitle': 'PORTFOLIO & WORK SAMPLES',
-        'portfolio-title': 'Selected Work & Technical Case Studies',
-        'portfolio-desc': 'Click any card to inspect full high-resolution diagrams and download resources.',
         'exp-subtitle': 'CAREER PATHWAY',
         'exp-title': 'Professional Experience',
         'skills-subtitle': 'SKILLSET & ABILITIES',
