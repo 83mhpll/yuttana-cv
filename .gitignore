@@ -1,0 +1,6 @@
+# Ignore personal ID documents and raw scans
+IMG_0726.jpeg
+IMG_0728.jpeg
+5287d210-53b9-47cb-8d5c-00fbccad72f7.jpeg
+.DS_Store
+*.tmp
